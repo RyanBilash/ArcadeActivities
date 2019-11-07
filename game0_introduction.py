@@ -15,7 +15,7 @@ NEXT_PHASE = {
     'spinning backward': 'waiting again',
     'waiting again': 'spinning forward'
     }
-
+#finite state machine
 
 class Cisc108Logo(arcade.Sprite):
     phase: str
@@ -63,6 +63,7 @@ class Cisc108Game(arcade.Window):
         """ Called when it is time to draw the world """
         arcade.start_render()
         self.logo_list.draw()
+        #all things in the list are called
 
     def on_update(self, delta_time):
         self.logo_list.update()
